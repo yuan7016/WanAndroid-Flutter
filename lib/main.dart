@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wan_android_flutter/page/splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,12 +27,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    Navigator.push(context, MaterialPageRoute(builder: (context){
+      return MySplashApp();
+    }));
   }
 
   @override
@@ -50,10 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
             ),
           ],
         ),
