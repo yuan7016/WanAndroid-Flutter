@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     Navigator.push(context, MaterialPageRoute(builder: (context){
-      return MySplashApp();
+      return SplashPage();
     }));
   }
 
