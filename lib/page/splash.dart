@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wan_android_flutter/mainPage.dart';
 
 //void main() {
 //  runApp(MySplashApp());
@@ -9,6 +10,10 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "启动页",
+      routes: {
+        "splash_page" : (context) => SplashPage(),
+        "home_page" : (context) => MyMainPageApp(),
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -20,20 +25,20 @@ class SplashPage extends StatelessWidget {
 class MySplashPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return null;
+    return MySplashState();
   }
 }
 
-class MySplashState extends State<MySplashPage>{
-
+class MySplashState extends State<MySplashPage> {
   @override
   void initState() {
     super.initState();
     //延迟两秒跳转
-    Future.delayed(Duration(seconds: 2),(){
+    Future.delayed(Duration(seconds: 2), () {
       print("==延迟两秒跳转==");
+      //延迟两秒跳转
+      Navigator.popAndPushNamed(context, "home_page");
     });
-
   }
 
   @override
@@ -65,5 +70,4 @@ class MySplashState extends State<MySplashPage>{
       ),
     );
   }
-
 }

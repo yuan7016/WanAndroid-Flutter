@@ -1,5 +1,5 @@
-name: wan_android_flutter
-description: A new Flutter application.
+name: wan_android_flutter #@项目名称
+description: A new Flutter application. #项目描述
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43

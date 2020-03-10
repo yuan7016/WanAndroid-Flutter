@@ -1,6 +1,6 @@
 # wan_android_flutter
 
-A new Flutter application.
+玩Android-Flutter版本.
 
 ## Getting Started
 
