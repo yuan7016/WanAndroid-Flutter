@@ -12,7 +12,7 @@ class SplashPage extends StatelessWidget {
       title: "启动页",
       routes: {
         "splash_page" : (context) => SplashPage(),
-        "home_page" : (context) => MyMainPageApp(),
+        "home_page" : (context) => MainHomePage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -35,7 +35,6 @@ class MySplashState extends State<MySplashPage> {
     super.initState();
     //延迟两秒跳转
     Future.delayed(Duration(seconds: 2), () {
-      print("==延迟两秒跳转==");
       //延迟两秒跳转
       Navigator.popAndPushNamed(context, "home_page");
     });
