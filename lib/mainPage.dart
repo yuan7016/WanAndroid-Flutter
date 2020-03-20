@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-
+/**
+ * 主页
+ */
 class MainHomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
