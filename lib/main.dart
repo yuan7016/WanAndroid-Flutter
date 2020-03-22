@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wan_android_flutter/page/splash.dart';
+import 'package:wan_android_flutter/page/splashPage.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:wan_android_flutter/mainPage.dart';
+import 'package:wan_android_flutter/page/mainPage.dart';
 
 //void main() {
 //  runApp(MySplashApp());
 //}
-
+/**
+ * 启动页
+ */
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,7 @@ class MySplashState extends State<MySplashPage> {
                   color: Colors.white,
                 ),
               ),
-              Text("by yuan7016",
+              Text("version 1.0",
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white,
