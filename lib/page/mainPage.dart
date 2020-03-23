@@ -94,21 +94,27 @@ class HomeDrawer extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: MediaQuery.removePadding(
-          removeTop: true,
-          context: context,
-          child:Column(
-            children: <Widget>[
-              Text(
-                "Drawer",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "userInfo",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ],
-          )
+      child: Column(
+        children: <Widget>[
+          Container(
+            color: Colors.lightBlue,
+            height: 300,
+            child: Column(
+              children: <Widget>[
+                Image.asset("images/img_wanandroid_logo.png"),
+                Text("请登录")
+              ],
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.loyalty),
+            title: Text('我的收藏'),
+          ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text('设置'),
+          ),
+        ],
       ),
     );
   }
