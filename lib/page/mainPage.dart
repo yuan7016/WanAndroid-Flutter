@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:wan_android_flutter/constant.dart';
+import 'package:wan_android_flutter/page/home/firstPage.dart';
 
 /**
  * 主页
@@ -32,9 +33,19 @@ class MyHomeState extends State<HomePage>{
   int _currentIndex = 0;
   String _title = "首页";
 
+  var _pageList;
+
   @override
   void initState() {
     super.initState();
+
+    _pageList=[
+      HomeFragmentPage(),
+      HomeFragmentPage(),
+      HomeFragmentPage(),
+      HomeFragmentPage(),
+    ];
+
   }
 
 
@@ -50,10 +61,9 @@ class MyHomeState extends State<HomePage>{
         ],
       ),
       drawer: HomeDrawer(),
-      body: Center(
-        child: Text("This is $_title"),
-      ),
-      bottomNavigationBar: BottomNavigationBar(type: BottomNavigationBarType.fixed,
+      body: _pageList[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
@@ -87,7 +97,6 @@ class MyHomeState extends State<HomePage>{
       ),
     );
   }
-
 }
 
 class HomeDrawer extends StatelessWidget{
