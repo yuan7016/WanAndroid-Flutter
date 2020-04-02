@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:wan_android_flutter/constant.dart';
-import 'package:wan_android_flutter/page/home/firstPage.dart';
+import 'package:wan_android_flutter/page/firstPage.dart';
+import 'package:wan_android_flutter/page/projectPage.dart';
+import 'package:wan_android_flutter/page/systemPage.dart';
+import 'answerPage.dart';
 
 /**
  * 主页
@@ -41,9 +44,9 @@ class MyHomeState extends State<HomePage>{
 
     _pageList=[
       HomeFragmentPage(),
-      HomeFragmentPage(),
-      HomeFragmentPage(),
-      HomeFragmentPage(),
+      AnswerFragmentPage(),
+      SystemFragmentPage(),
+      ProjectFragmentPage(),
     ];
 
   }

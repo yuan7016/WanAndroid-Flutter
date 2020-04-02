@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 //首页
 class HomeFragmentPage extends StatefulWidget {
@@ -35,16 +36,19 @@ class HomePageState extends State<HomeFragmentPage> {
         children: <Widget>[
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 400,
+            height: 180,
             child: Swiper(
               itemCount: _bannerList.length,
               itemBuilder: (BuildContext context,int index){
                 return Image.network(_bannerList[index],fit: BoxFit.fill,);
               },
-              pagination: SwiperPagination(),
-              control: SwiperControl(),
+              pagination: null,//分页指示器
+              control: null,//分页按钮
               controller: _swiperController,
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.horizontal,//水平轮播
+              onTap: (int index){//点击事件
+                Fluttertoast.showToast(msg: "点击了第 $index 个banner");
+              },
             )
           ),
         ],
